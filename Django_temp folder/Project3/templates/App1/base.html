@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+           <title>Give Title</title>
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'App1/style3.css' %}" alt="not found">
+</head>
+<body>
+      <header>
+          <h1>Ecommerce Company</h1>
+      </header>
+     <ul class="my_navbar">
+         <li><a href="/a1/ho/">Home</a></li>
+         <li><a href="/a1/ab/">About</a></li>
+         <li><a href="/a1/log/">Login</a></li>
+         <li><a href="/a1/reg/">Register</a></li>
+         <li><a href="/a1/cont/">Contact</a></li>
+     </ul>
+
+      {% block content %}
+         <h1>This is content block</h1>
+      {% endblock %}
+
+      {% block content1 %}
+          <h1>First block code here</h1>
+      {% endblock %}
+
+      {% block content2 %}
+          <h1>Last block code here</h1>
+      {% endblock %}
+</body>
+<footer>
+     <h4>Copyright 2021</h4>
+</footer>
+4321

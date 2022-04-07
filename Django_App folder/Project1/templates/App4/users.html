@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>employers</title>
+</head>
+<body>
+<h1>Employee List</h1>
+<table border="1">
+<tr>
+    <th>eid</th>
+    <th>ename</th>
+    <th>edesignation</th>
+    <th>ecity</th>
+    <th>estate</th>
+    <th>esalary</th>
+</tr>
+
+<tr>
+{% for i in Emp1 %}
+    <td>{{i}}</td>
+{% endfor %}
+</tr>
+
+<tr>
+{% for i in Emp2 %}
+    <td>{{i}}</td>
+{% endfor %}
+</tr>
+
+<tr>
+{% for i in Emp3 %}
+    <td>{{i}}</td>
+{% endfor %}
+</tr>
+
+<tr>
+{% for i in Emp4 %}
+    <td>{{i}}</td>
+{% endfor %}
+</tr>
+
+<tr>
+{% for i in Emp5 %}
+    <td>{{i}}</td>
+{% endfor %}
+</tr>
+
+</table>
+
+</body>
+</html>

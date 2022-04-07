@@ -1,0 +1,43 @@
+{% extends 'App1/base.html' %}
+{% load static %}
+{% block content %}
+<h1>Product Table</h1>
+<table border="3">
+<tr>
+    <th>pid</th>
+    <th>pname</th>
+    <th>pwarranty</th>
+</tr>
+
+<tr>
+{% for i in Pro1 %}
+    <td>{{i}}</td>
+{% endfor %}
+</tr>
+
+<tr>
+{% for i in Pro2 %}
+    <td>{{i}}</td>
+{% endfor %}
+</tr>
+
+<tr>
+{% for i in Pro3 %}
+    <td>{{i}}</td>
+{% endfor %}
+</tr>
+</table>
+
+{% endblock %}
+
+{% block title %}
+     <title>third page</title>
+{% endblock %}
+
+{% block content1 %}
+      <h1>First block code here</h1>
+{% endblock %}
+
+{% block content2 %}
+      <h1>Last block code here</h1>
+{% endblock %}

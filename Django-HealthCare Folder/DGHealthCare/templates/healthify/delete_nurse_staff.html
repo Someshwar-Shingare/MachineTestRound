@@ -1,0 +1,22 @@
+{% extends 'baseadmin.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block title %}
+ <title>Nurse Staff Delete</title>
+{% endblock %}
+
+
+{% block content %}
+    <div class="container">
+
+        <form method="post" class="jumbotron">
+            {% csrf_token %}
+            <p>Are You Sure to Delete the NursingStaff {{nurse.name}} from {{nurse.address}} with {{nurse.aadhaar_number}}?</p>
+            <input type="submit" value="Delete" class="btn btn-danger">
+            <a href="{% url 'shownur' %}">
+                <input type="button" value="Cancel" class="btn btn-success">
+            </a>
+        </form>
+    </div>
+{% endblock %}

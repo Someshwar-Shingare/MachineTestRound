@@ -1,0 +1,21 @@
+{% extends 'App1/base.html' %}
+{% load static %}
+{% block content %}
+<h1>Hello from Login Page</h1>
+<a href="//google.com">Search</a><br><br>
+
+<h1>Login Information</h1><br><br>
+
+<form>
+      Username : <input type ="text" name = "unm" required><br><br>
+      Password : <input type ="password" name = "pwd" required><br><br>
+      <input type = "submit" value = "Login">
+</form>
+
+{% endblock %}
+
+{% block title %}
+    <title>login page</title>
+{% endblock %}
+
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>about page</title>
+    <link rel="stylesheet" href="{% static '/FirstApp/mystyle.css' %}" alt="not found">
+</head>
+<body>
+     <ul class="my_navbar">
+         <li><a href="/fa/home/">Home</a></li>
+         <li><a href="/fa/about/">About</a></li>
+         <li><a href="/fa/login/">Login</a></li>
+         <li><a href="/fa/reg/">Register</a></li>
+         <li><a href="/fa/cont/">Contact</a></li>
+
+     </ul>
+<h1>Hello From About Page</h1>
+     <a href="//google.com">Search</a><br><br>
+     <img src="{% static 'FirstApp/laptop2.jpg' %}" alt="not found">
+
+<footer>
+     <h4>Copyright 2021</h4>
+
+</footer>
+</body>
+</html>

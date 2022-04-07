@@ -1,0 +1,48 @@
+{% extends 'baseadmin.html' %}
+
+{% block title %}
+<title>All Room Staff</title>
+{% endblock %}
+
+{% block content %}
+
+         <header>
+             <h1>All Room Service Staff Data</h1>
+         </header>
+          <br>
+
+        <table class="table table-dark">
+            <tr>
+                <th>Room Staff ID</th>
+                <th>Room Staff Name</th>
+
+                <th>Room Staff Gender</th>
+
+                <th>Room Staff Address</th>
+                <th>Room Staff Age</th>
+                 <th>Room Staff Aadhaar Number</th>
+
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+            {% for room in roomservicestaffs %}
+            <tr>
+                <td>{{room.id}}</td>
+                <td>{{room.name}}</td>
+                <td>{{room.gender}}</td>
+                <td>{{room.address}}</td>
+                <td>{{room.age}}</td>
+                <td>{{room.aadhaar_number}}</td>
+                <td>
+                    <a href="{% url 'updaterm' room.id %}"><button class="btn btn-warning">
+                        update
+                        </button>
+                    </a>
+                </td>
+                <td><a href = "{% url 'deleterm' room.id %}"><button class="btn btn-danger">Delete</button></a></td>
+            </tr>
+            {% endfor %}
+        </table>
+
+
+{% endblock %}

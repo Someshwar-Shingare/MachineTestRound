@@ -1,0 +1,36 @@
+<!--
+For Hiding Form Field
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Third</title>
+</head>
+<body>
+<form action="/second">
+    <input type="hidden" name="d1" value="{{request.args.get('d1')}}">
+    <br>
+    First data : {{request.args.get('d1')}}<br>
+    second data : <input type="text" name="d2"><br>
+    <input type="submit">
+</form>
+</body>
+</html>
+-->
+
+
+<!--For Cookies,Session-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Third</title>
+</head>
+<body>
+<form action="/second">
+    First data : {{request.args.get('d1')}}<br>
+    second data : <input type="text" name="d2"><br>
+    <input type="submit">
+</form>
+</body>
+</html>

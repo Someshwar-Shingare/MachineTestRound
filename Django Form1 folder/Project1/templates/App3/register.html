@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>register page</title>
+</head>
+<body>
+   <h1>Registration Form</h1>
+   <form method="post">
+       {% csrf_token %}
+       <label for="na">Enter Your Name:</label>
+       <input type="text" name="name" id="na">
+       <br><br>
+       <label for="db">Enter Your Date Of Birth:</label>
+       <input type="text" name="date of birth" id="db">
+       <br><br>
+       <label for="ag">Enter Your Age:</label>
+       <input type="text" name="age" id="ag">
+       <br><br>
+       <label for="ad">Enter Your Address:</label>
+       <input type="text" name="address" id="ad">
+       <br><br>
+        <label for="em">Enter Your Email:</label>
+       <input type="text" name="email" id="em">
+       <br><br>
+       <label for="mb">Enter Your Mobile Number:</label>
+       <input type="number" name="mobile number" id="mb">
+       <br><br>
+        <label for="gr">Enter Your Gender:</label>
+       <input type="text" name="gender" id="gr">
+       <select>
+             <option>Male</option>
+             <option>Female</option>
+       </select>
+       <br><br>
+       <label for="we">Enter Your Work Experience:</label>
+       <input type="text" name="work experience" id="we">
+       <br><br>
+       <input type="submit" value="Register">
+   </form>
+
+
+</body>
+</html>

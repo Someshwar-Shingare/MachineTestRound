@@ -1,0 +1,22 @@
+{% extends 'baseadmin.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block title %}
+ <title>Category Delete</title>
+{% endblock %}
+
+
+{% block content %}
+    <div class="container">
+
+        <form method="post" class="jumbotron">
+            {% csrf_token %}
+            <p>Are You Sure to Delete the Category with {{cat.name}}?</p>
+            <input type="submit" value="Delete" class="btn btn-danger">
+            <a href="{% url 'showcr' %}">
+                <input type="button" value="Cancel" class="btn btn-success">
+            </a>
+        </form>
+    </div>
+{% endblock %}

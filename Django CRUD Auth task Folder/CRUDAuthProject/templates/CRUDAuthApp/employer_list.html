@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+     <title>All Employers</title>
+{% endblock %}
+
+{% block content %}
+
+        <table class="table table-dark">
+            <tr>
+                <th>Employer ID</th>
+                <th>Employer Name</th>
+
+                <th>Employer Email</th>
+
+                <th>Employer MobNo</th>
+                <th>Employer Designation</th>
+                <th>Employer Salary</th>
+
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+            {% for emp in object_list %}
+            <tr>
+                <td>{{emp.id}}</td>
+                <td>{{emp.name}}</td>
+                <td>{{emp.email}}</td>
+                <td>{{emp.mobno}}</td>
+                <td>{{emp.designation}}</td>
+                <td>{{emp.salary}}</td>
+                <td>
+                    <a href="{% url 'emp_update' emp.id %}">
+                        <button class="btn btn-warning">
+                        update
+                        </button>
+                    </a>
+                </td>
+                <td><a href = "{% url 'emp_delete' emp.id %}"><button class="btn btn-danger">Delete</button></a></td>
+            </tr>
+            {% endfor %}
+        </table>
+
+
+{% endblock %}

@@ -1,0 +1,85 @@
+<!--Insert data through form in database-->
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Page</title>
+</head>
+<body>
+<form action="/empreg" method="post">
+    Emp Name    : <input type="text" name="ename"><br><br>
+    Emp Address : <input type="text" name="eaddr"><br><br>
+    <input type="submit" value="Register">
+</form>
+
+
+</body>
+</html>
+-->
+
+
+
+<!--Insert data through form in database and display the data-->
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Page</title>
+</head>
+<body>
+<form action="/empreg" method="post">
+    Emp Name    : <input type="text" name="ename"><br><br>
+    Emp Address : <input type="text" name="eaddr"><br><br>
+    <input type="submit" value="Register">
+</form>
+<hr>
+{% if obj %}
+      {% for obj1 in obj %}
+           Employee ID       : {{obj1.eid}}<br>
+           Employee Name     : {{obj1.ename}}<br>
+           Employee Address  : {{obj1.eaddr}}<br>
+           <hr>
+       {% endfor %}
+{% else %}
+      <h3>No record found!!</h3>
+{% endif %}
+
+
+</body>
+</html>
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Page</title>
+</head>
+<body>
+<form action="/empreg" method="post">
+    Emp Name    : <input type="text" name="ename"><br><br>
+    Emp Address : <input type="text" name="eaddr"><br><br>
+    <input type="submit" value="Register">
+</form>
+<hr>
+{% if obj %}
+      {% for obj1 in obj %}
+           Employee ID       : {{obj1.eid}}<br>
+           Employee Name     : {{obj1.ename}}<br>
+           Employee Address  : {{obj1.eaddr}}<br>
+           <a href="/update/{{obj1.eid}}">Update</a>
+           <a href="/delete/{{obj1.eid}}">Delete</a>
+           <hr>
+      {% endfor %}
+{% else %}
+      <h3>No record found!!</h3>
+{% endif %}
+
+
+</body>
+</html>

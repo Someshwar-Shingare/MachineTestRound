@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+           <title>Give Title</title>
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'App1/style4.css' %}" alt="not found">
+</head>
+<body>
+      <header>
+          <h1>Different Tables</h1>
+      </header>
+     <ul class="my_navbar">
+         <li><a href="/a1/ho/">Home</a></li>
+         <li><a href="/a1/f/">First</a></li>
+         <li><a href="/a1/s/">Second</a></li>
+         <li><a href="/a1/t/">Third</a></li>
+         <li><a href="/a1/fo/">Fourth</a></li>
+         <li><a href="/a1/fif/">Fifth</a></li>
+     </ul>
+
+      {% block content %}
+         <h1>This is content block</h1>
+      {% endblock %}
+
+      {% block table1 %}
+          <h3>First block code here</h3>
+      {% endblock %}
+
+      {% block content2 %}
+          <h3>Last block code here</h3>
+      {% endblock %}
+
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+     <title>All Laptops</title>
+{% endblock %}
+
+{% block content %}
+
+        <table class="table table-dark">
+            <tr>
+                <th>Laptop ID</th>
+                <th>Laptop Company</th>
+
+                <th>Laptop Name</th>
+
+                <th>Laptop RAM</th>
+                <th>Laptop ROM</th>
+                 <th>Laptop Price</th>
+
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+            {% for lap in object_list %}
+            <tr>
+                <td>{{lap.id}}</td>
+                <td>{{lap.company}}</td>
+                <td>{{lap.name}}</td>
+                <td>{{lap.ram}}</td>
+                <td>{{lap.rom}}</td>
+                <td>{{lap.price}}</td>
+                <td>
+                    <a href="{% url 'lap_update' lap.id %}">
+                        <button class="btn btn-warning">
+                        update
+                        </button>
+                    </a>
+                </td>
+                <td><a href = "{% url 'lap_delete' lap.id %}"><button class="btn btn-danger">Delete</button></a></td>
+            </tr>
+            {% endfor %}
+        </table>
+
+
+{% endblock %}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'App1/style.css' %}" alt="not found">
+</head>
+<body>
+<a href="//google.com">Search</a>
+<h1>Employee List</h1>
+<img src="{% static 'App1/laptop2.jpg' %}" alt="not found">
+
+<h1>Employee Table</h1>
+{% if Emplist %}
+<table border="1">
+<tr>
+    <th>eid</th>
+    <th>ename</th>
+    <th>edesignation</th>
+    <th>ecity</th>
+    <th>estate</th>
+    <th>esalary</th>
+</tr>
+
+{% for emp in Emplist %}
+    <tr>
+       <td>{{emp.eid}} </td>
+        <td>{{emp.ename}} </td>
+       <td>{{emp.edesignation}} </td>
+       <td>{{emp.ecity}}</td>
+       <td>{{emp.estate}}</td>
+       <td>{{emp.esalary}}</td>
+    </tr>
+{% endfor %}
+
+
+</table>
+{% else %}
+<h3>This is Empty List</h3>
+{% endif %}
+</body>
+</html>

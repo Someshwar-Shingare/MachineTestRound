@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block title %}
+ <title>Delete Laptop</title>
+{% endblock %}
+
+
+{% block content %}
+    <div class="container">
+
+        <form method="post" class="jumbotron">
+            {% csrf_token %}
+            <p>Are You Sure to Delete the product {{object.name}} from {{object.company}} worth Rs.{{object.price}}?</p>
+            <input type="submit" value="Delete" class="btn btn-danger">
+            <a href="{% url 'lap_list' %}">
+                <input type="button" value="Cancel" class="btn btn-success">
+            </a>
+        </form>
+    </div>
+{% endblock %}

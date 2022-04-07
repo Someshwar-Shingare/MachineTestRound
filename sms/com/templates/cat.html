@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Category Page</title>
+</head>
+<body>
+<h1>Flash messages with category</h1>
+{% for cat,msg in get_flashed_messages(with_categories=True) %}
+    <h3>{{cat}} ---> {{msg}}</h3>
+{% endfor %}
+
+</body>
+</html>

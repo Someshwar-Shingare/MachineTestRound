@@ -1,0 +1,41 @@
+h1{
+    color: blue;
+}
+body{
+     background-color: lightgreen;
+}
+.my_navbar
+{
+   background-color: orange;
+   overflow: hidden;
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+}
+li
+{
+    float: left;
+}
+li a
+{
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 10px 10px 10px;
+}
+
+li a:hover
+{
+    background-color: springgreen;
+}
+
+header h1
+{
+    text-align: center;
+}
+
+footer h4
+{
+    background-color: gray;
+    text-align: center;
+}

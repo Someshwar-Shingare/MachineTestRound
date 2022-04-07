@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Page</title>
+</head>
+<body>
+<form action="/update/{{obj_key.eid}}" method="post">
+
+    Emp Name    : <input type="text" name="ename" value="{{obj_key.ename}}"><br><br>
+    Emp Address : <input type="text" name="eaddr" value="{{obj_key.eaddr}}"><br><br>
+    <input type="submit" value="Update">
+
+</body>
+</html>

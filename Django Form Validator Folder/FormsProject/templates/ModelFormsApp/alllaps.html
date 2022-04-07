@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>all laptops</title>
+</head>
+<body>
+    <table border="1px;">
+       <tr>
+           <th>Company</th>
+           <th>Model</th>
+           <th>RAM</th>
+           <th>ROM</th>
+           <th>Price</th>
+       </tr>
+       {% for lappy in laptops %}
+          <tr>
+              <td>{{lappy.company}}</td>
+              <td>{{lappy.model_name}}</td>
+              <td>{{lappy.ram}}</td>
+              <td>{{lappy.rom}}</td>
+              <td>{{lappy.price}}</td>
+          </tr>
+       {% endfor %}
+   </table>
+
+
+</body>
+</html>

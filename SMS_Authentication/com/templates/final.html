@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Final Page</title>
+</head>
+<body>
+{% if current_user.is_authenticated %}
+<h2>Welcome {{current_user.username}}!</h2>
+{% endif %}
+<h1>You have successfully Logged in!!</h1>
+<a href="{{url_for('logoutView')}}">Logout</a>
+
+</body>
+</html>

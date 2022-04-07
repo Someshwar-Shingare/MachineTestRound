@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+<title>All Products</title>
+{% endblock %}
+
+{% block content %}
+
+        <table class="table table-dark">
+            <tr>
+                <th>Product ID</th>
+                <th>Product Category</th>
+
+                <th>Product Company</th>
+
+                <th>Product Name</th>
+                <th>Product Quantity</th>
+                 <th>Product Price</th>
+
+                <th>Upadate</th>
+                <th>Delete</th>
+            </tr>
+            {% for prod in products %}
+            <tr>
+                <td>{{prod.id}}</td>
+                <td>{{prod.category}}</td>
+                <td>{{prod.company}}</td>
+                <td>{{prod.name}}</td>
+                <td>{{prod.qty}}</td>
+                <td>{{prod.price}}</td>
+                <td>
+                    <a href="{% url 'update' prod.id %}"><button class="btn btn-warning">
+                        update
+                        </button>
+                    </a>
+                </td>
+                <td><a href = "{% url 'delete' prod.id %}"><button class="btn btn-danger">Delete</button></a></td>
+            </tr>
+            {% endfor %}
+        </table>
+
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'baseadmin.html' %}
+
+{% block title %}
+<title>All Products</title>
+{% endblock %}
+
+{% block content %}
+
+        <header>
+             <h1>All Nursing Staff Data</h1>
+         </header>
+         <br>
+        <table class="table table-dark">
+            <tr>
+                <th>Nurse ID</th>
+                 <th>Nurse Name</th>
+                <th>Nurse Gender</th>
+
+                <th>Nurse Address</th>
+
+                <th>Nurse Age </th>
+                <th>Nurse Qualification</th>
+                 <th>Nurse Aadhaar Number</th>
+
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+            {% for nurse in nursingstaffs %}
+            <tr>
+                <td>{{nurse.id}}</td>
+                <td>{{nurse.name}}</td>
+                <td>{{nurse.gender}}</td>
+                <td>{{nurse.address}}</td>
+                <td>{{nurse.age}}</td>
+                <td>{{nurse.qualification}}</td>
+                <td>{{nurse.aadhaar_number}}</td>
+                <td>
+                    <a href="{% url 'updatenur' nurse.id %}"><button class="btn btn-warning">
+                        update
+                        </button>
+                    </a>
+                </td>
+                <td><a href = "{% url 'deletenur' nurse.id %}"><button class="btn btn-danger">Delete</button></a></td>
+            </tr>
+            {% endfor %}
+        </table>
+
+
+{% endblock %}

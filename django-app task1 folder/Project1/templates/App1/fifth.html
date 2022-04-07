@@ -1,0 +1,43 @@
+{% extends 'App1/base.html' %}
+{% load static %}
+{% block content %}
+<h1>Laptop Table</h1>
+<table border="3">
+<tr>
+    <th>lname</th>
+    <th>lram</th>
+    <th>lprice</th>
+</tr>
+
+   <tr>
+{% for i in Lap1 %}
+    <td>{{i}}</td>
+{% endfor %}
+</tr>
+
+<tr>
+{% for i in Lap2 %}
+    <td>{{i}}</td>
+{% endfor %}
+</tr>
+
+<tr>
+{% for i in Lap3 %}
+    <td>{{i}}</td>
+{% endfor %}
+</tr>
+
+</table>
+{% endblock %}
+
+{% block title %}
+     <title>fifth page</title>
+{% endblock %}
+
+{% block content1 %}
+      <h1>First block code here</h1>
+{% endblock %}
+
+{% block content2 %}
+      <h1>Last block code here</h1>
+{% endblock %}

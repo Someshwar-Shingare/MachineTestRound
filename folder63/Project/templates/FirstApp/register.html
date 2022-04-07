@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>register Page</title>
+    <link rel="stylesheet" href="{% static 'FirstApp/mystyle.css' %}" alt="not found">
+</head>
+<body>
+     <ul class="my_navbar">
+         <li><a href="/fa/home/">Home</a></li>
+         <li><a href="/fa/about/">About</a></li>
+         <li><a href="/fa/login/">Login</a></li>
+         <li><a href="/fa/reg/">Register</a></li>
+         <li><a href="/fa/cont/">Contact</a></li>
+
+     </ul>
+<a href="//google.com">Search</a><br><br>
+<h1>Registration Form</h1>
+<form>
+           Name :  <input type ="text" value = "Enter Name"><br><br>
+            Age :  <input type ="number" value = "Enter Age"><br><br>
+     Birth Date :  <input type ="number" value = "Enter your Birth Date"><br><br>
+           City :  <input type ="text" value = "Enter your city" required>
+                   <select>
+                         <option>Pune<option>
+                         <option>Mumbai<option>
+                         <option>Aurangabad<option>
+                         <option>Nanded<option>
+                         <option>Nagpur<option>
+                   </select><br><br>
+         State :   <input type ="text" value = "Enter Your State">
+
+                  <select>
+                        <option>Maharashtra<option>
+                        <option>Goa<option>
+                        <option>Gujrat<option>
+                        <option>Telangana<option>
+                        <option>Andhrapradesh<option>
+                   </select><br><br>
+
+
+        Pincode :  <input type ="number" value = "Enter Your Pincode"><br><br>
+      Mobile No.:  <input type ="number" value = "Enter Your Mobile No."><br><br>
+         Address:  <input type ="text" value = "Enter Your Address"><br><br>
+     Designation:  <input type ="text" value = "Enter Your Designation"<br><br><br>
+      Experience:  <Input type="number" value="Enter Experience" placeholder="abc"><br><br>
+    <input type = "submit" value = "Register">
+</form>
+
+<footer>
+     <h4>Copyright 2021</h4>
+
+</footer>
+</body>
+</html>

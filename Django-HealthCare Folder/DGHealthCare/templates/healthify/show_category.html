@@ -1,0 +1,32 @@
+{% extends 'baseadmin.html' %}
+
+{% block title %}
+<title>All Categories</title>
+{% endblock %}
+
+{% block content %}
+
+        <header>
+             <h1>All Categories Data</h1>
+         </header>
+         <br>
+        <table class="table table-dark">
+            <tr>
+                <th>Category ID</th>
+                 <th>Category Name Name</th>
+
+                <th>Delete</th>
+            </tr>
+            {% for cat in categories%}
+            <tr>
+                <td>{{cat.id}}</td>
+                <td>{{cat.name}}</td>
+
+
+                <td><a href = "{% url 'deletecr' cat.id %}"><button class="btn btn-danger">Delete</button></a></td>
+            </tr>
+            {% endfor %}
+        </table>
+
+
+{% endblock %}

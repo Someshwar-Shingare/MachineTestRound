@@ -1,0 +1,45 @@
+{% extends 'App1/base.html' %}
+{% load static %}
+{% block content %}
+<h1>Student Table</h1>
+<table border="1">
+<tr>
+    <th>sid</th>
+    <th>sname</th>
+    <th>sclass</th>
+
+</tr>
+
+<tr>
+{% for i in St1 %}
+    <td>{{i}}</td>
+{% endfor %}
+</tr>
+
+<tr>
+{% for i in St2 %}
+    <td>{{i}}</td>
+{% endfor %}
+</tr>
+
+<tr>
+{% for i in St3 %}
+    <td>{{i}}</td>
+{% endfor %}
+</tr>
+
+</table>
+
+{% endblock %}
+
+{% block title %}
+     <title>second page</title>
+{% endblock %}
+
+{% block content1 %}
+      <h1>First block code here</h1>
+{% endblock %}
+
+{% block content2 %}
+      <h1>Last block code here</h1>
+{% endblock %}

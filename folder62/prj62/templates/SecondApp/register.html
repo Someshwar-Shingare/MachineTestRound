@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>register page</title>
+    <link rel="stylesheet" href="{% static 'SecondApp/style2.css' %}" alt="not found">
+
+</head>
+<body>
+<h1>Registration Form</h1>
+<form>
+           Name :  <input type ="text" name = "unm" required><br><br>
+            Age :  <input type ="number" name = "pwd" required><br><br>
+     Birth Date :  <input type ="number" name = "num" required><br><br>
+           City :  <input type ="text" name = "pwd" required>
+                   <select>
+                         <option>Pune<option>
+                         <option>Mumbai<option>
+                         <option>Aurangabad<option>
+                         <option>Nanded<option>
+                         <option>Nagpur<option>
+                   </select><br><br>
+         State :   <input type ="text" name = "unm" required>
+
+                  <select>
+                        <option>Maharashtra<option>
+                        <option>Goa<option>
+                        <option>Gujrat<option>
+                        <option>Telangana<option>
+                        <option>Andhrapradesh<option>
+                   </select><br><br>
+
+
+        Pincode :  <input type ="number" name = "pwd" required><br><br>
+      Mobile No.:  <input type ="number" name = "unm" required><br><br>
+         Address:  <input type ="text" name = "pwd" required><br><br>
+     Designation:  <input type ="text" name = "pwd" required><br><br>
+      Experience:  <Input type="number"value="Enter Experience" placeholder="abc"><br><br>
+<br>
+    <input type = "submit" value = "Register">
+</form>
+
+</body>
+</html>

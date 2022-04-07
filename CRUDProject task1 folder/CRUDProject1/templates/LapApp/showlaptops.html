@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>All Laptops</title>
+{% endblock %}
+
+{% block content %}
+
+        <table class="table table-dark">
+            <tr>
+                <th>Laptop ID</th>
+                <th>Laptop BrandName</th>
+
+                <th>Laptop ModelName</th>
+
+                <th>Laptop RAM</th>
+                <th>Laptop ROM</th>
+                 <th>Laptop SSD</th>
+                <th>Laptop Processor</th>
+                <th>Laptop OS</th>
+                 <th>Laptop Price</th>
+
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+            {% for lap in laptops %}
+            <tr>
+                <td>{{lap.id}}</td>
+                <td>{{lap.brand_name}}</td>
+                <td>{{lap.model_name}}</td>
+                <td>{{lap.ram}}</td>
+                <td>{{lap.rom}}</td>
+                <td>{{lap.ssd}}</td>
+                <td>{{lap.processor}}</td>
+                <td>{{lap.os}}</td>
+                <td>{{lap.price}}</td>
+                <td>
+                    <a href="{% url 'update' lap.id %}"><button class="btn btn-warning">
+                        update
+                        </button>
+                    </a>
+                </td>
+                <td><a href = "{% url 'delete' lap.id %}"><button class="btn btn-danger">Delete</button></a></td>
+            </tr>
+            {% endfor %}
+        </table>
+
+
+{% endblock %}

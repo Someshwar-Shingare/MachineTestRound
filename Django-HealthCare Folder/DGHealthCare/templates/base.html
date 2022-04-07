@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+           <title>Give Title</title>
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'healthify/css/style.css' %}" alt="not found">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+<body>
+
+     <link rel="stylesheet" href="{% static 'healthify/css/style.css' %}" alt="not found">
+      <ul class="my_navbar">
+         <li><a>Healthify</a></li>
+         <li><a href="{% url 'home' %}">Home</a></li>
+         <li><a href="{% url 'addapp' %}">Appointment</a></li>
+         <li><a href="{% url 'addamb' %}">Ambulance</a></li>
+          {% if user.is_superuser %}
+                <li>
+                    <a href="{% url 'admin' %}">Admin</a>
+                </li>
+          {% endif %}
+
+          <span style="float: right;">
+          <li><a href="{% url 'store' %}">Healthify Store</a></li>
+
+             {% if user.is_authenticated %}
+
+                  <li><a>Hello, {{user.username}}</a></li>
+                  <li><a href="{% url 'logout' %}">Logout</a></li>
+
+             {% else %}
+                   <li><a href = "{% url 'login' %}">Login</a></li>
+                   <li><a href="{% url 'signup' %}">Signup</a></li>
+
+             {% endif %}
+          </span>
+     </ul>
+
+
+      <br>
+      <br>
+      {% block content %}
+         <h1>This is content block</h1>
+      {% endblock %}
+
+
+
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+      <script>
+            $('.carousel').carousel({
+             interval: 1000
+             })
+      </script>
+
+
+</body>
+
+</html>
+<br>
+<br>
+<footer>
+     <h4>Healthify@Copyright 2021</h4>
+</footer>
+
+
+
+

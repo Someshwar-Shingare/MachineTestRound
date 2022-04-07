@@ -1,0 +1,14 @@
+{% extends 'baseadmin.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+    <div class="container" style="width: 50%;">
+        <h1 style="text-align: center;">Add Nurse Staff</h1>
+        <form method="post" class="jumbotron">
+            {% csrf_token %}
+            {{form|crispy}}
+            <input type="submit" class="btn btn-primary">
+        </form>
+    </div>
+{% endblock %}

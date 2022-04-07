@@ -1,0 +1,47 @@
+{% extends 'baseadmin.html' %}
+
+{% block title %}
+<title>All Doctors</title>
+{% endblock %}
+
+{% block content %}
+         <header>
+             <h1>All Doctor Data</h1>
+         </header>
+         <br>
+
+        <table class="table table-dark">
+            <tr>
+                <th>Doctor ID</th>
+                <th>Doctor Name</th>
+
+                <th>Doctor Address</th>
+
+                <th>Doctor Age</th>
+                <th>Doctor Qualification</th>
+                 <th>Doctor Aaadhaar Number</th>
+
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+            {% for doct in doctors %}
+            <tr>
+                <td>{{doct.id}}</td>
+                <td>{{doct.name}}</td>
+                <td>{{doct.address}}</td>
+                <td>{{doct.age}}</td>
+                <td>{{doct.qualification}}</td>
+                <td>{{doct.aadhaar_number}}</td>
+                <td>
+                    <a href="{% url 'updatedoct' doct.id %}"><button class="btn btn-warning">
+                        update
+                        </button>
+                    </a>
+                </td>
+                <td><a href = "{% url 'deletedoct' doct.id %}"><button class="btn btn-danger">Delete</button></a></td>
+            </tr>
+            {% endfor %}
+        </table>
+
+
+{% endblock %}

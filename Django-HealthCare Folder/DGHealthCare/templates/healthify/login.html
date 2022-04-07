@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block title %}
+   <title>login page</title>
+{% endblock %}
+
+
+{% block content %}
+    <div class="container" style="width: 40%;">
+
+        <form method="post" class="jumbotron">
+            {% csrf_token %}
+            <label for="uname">Enter Username:</label>
+            <input type="text" name="uname" id="uname" class="form control"><br><br>
+             <label for="pw">Enter Password:</label>
+            <input type="password" name="pw" id="pw" class="form control">
+            {% for msg in messages %}
+            <p style="color: red:">{{msg}}</p>
+            {% endfor %}
+            <br>
+            <input type="submit" class="btn btn-primary" value="Login">
+            <div class="mt-4">
+					<div class="d-flex justify-content-center links">
+						Don't have an account? <a href="{% url 'signup' %}" class="ml-2">Sign Up</a>
+					</div>
+					<div class="d-flex justify-content-center links">
+						Forgot password? <a href="{% url 'reset_password' %}" class="ml-2">Reset password</a>
+					</div>
+
+				</div>
+        </form>
+
+    </div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'App1/base.html' %}
+{% load static %}
+{% block content %}
+
+    <h1>Hello From About Page</h1>
+    <a href="//google.com">Search</a><br><br>
+    <img src="{% static 'App1/laptop2.jpg' %}" alt="not found">
+
+{% endblock %}
+
+{% block title %}
+    <title>about page</title>
+{% endblock %}
+
+{% block content1 %}
+         <h3>Amazon.com, Inc. is an American multinational technology company which focuses on e-commerce, cloud computing, digital streaming, and artificial intelligence.</h3>
+         <h3>It is one of the Big Five companies in the U.S. information technology industry, along with Google, Apple, Microsoft, and Facebook</h3>
+{% endblock %}
+
+{% block content2 %}
+     <h3>   Customer service: 1800 3000 9009<</h3>
+     <h3>   Stock price: AMZN (NASDAQ) $3,349.63 +33.63 (+1.01%)</h3>
+     <h3>   27 Aug, 4:00 pm GMT-4 - Disclaimer</h3>
+     <h3>   CEO: Andy Jassy (5 Jul 2021–)</h3>
+     <h3>   Founder: Jeff Bezos</h3>
+     <h3>   Founded: 5 July 1994, Bellevue, Washington, United States</h3>
+     <h3>   Headquarters: Seattle, Washington, United States</h3>
+     <h3>   Revenue: 11,308 crores USD (Second quarter of 2021) Subsidiaries: Audible, Zappos, Whole Foods Market, AbeBooks, MORE</h3>
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'baseadmin.html' %}
+
+{% block title %}
+<title>All Appointments</title>
+{% endblock %}
+
+{% block content %}
+
+       <header>
+           <h1>Appointment Data</h1>
+       </header>
+        <br>
+        <table class="table table-dark">
+            <tr>
+                <th>Appointment ID</th>
+                <th>Appointment name</th>
+
+                <th>Appointment Gender</th>
+
+                <th>Appointment City</th>
+                <th>Appointment Previous Visit</th>
+                 <th>Appointment If Before Visited Visit Detail</th>
+                 <th>Appointment Date</th>
+                <th>Appointment Slot</th>
+                 <th>Appointment Contact Number</th>
+
+
+                <th>Delete</th>
+            </tr>
+            {% for appoint in appointments %}
+            <tr>
+                <td>{{appoint.id}}</td>
+                <td>{{appoint.name}}</td>
+                <td>{{appoint.gender}}</td>
+                <td>{{appoint.city}}</td>
+                <td>{{appoint.previous_visit}}</td>
+                <td>{{appoint.if_before_visited_visit_detail}}</td>
+                <td>{{appoint.appointment_date}}</td>
+                <td>{{appoint.slot}}</td>
+                <td>{{appoint.contact_number}}</td>
+
+                <td><a href = "{% url 'deleteapp' appoint.id %}"><button class="btn btn-danger">Delete</button></a></td>
+            </tr>
+            {% endfor %}
+        </table>
+
+
+{% endblock %}

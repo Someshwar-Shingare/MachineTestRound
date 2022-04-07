@@ -1,0 +1,60 @@
+<!--For Hiding Form Field-->
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Third</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<form action="/third">-->
+<!--    <input type="hidden" name="d1" value="{{request.args.get('d1')}}">-->
+<!--    <input type="hidden" name="d2" value="{{request.args.get('d2')}}">-->
+<!--    <br>-->
+<!--    First data : {{request.args.get('d1')}}<br>-->
+<!--    Second data : {{request.args.get('d2')}}<br>-->
+<!--    Third data : <input type="text" name="d3"><br>-->
+
+<!--    <input type="submit">-->
+<!--</form>-->
+<!--</body>-->
+
+
+
+
+<!--For Cookies-->
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Third</title>
+</head>
+<body>
+<form action="/third">
+    First data : {{request.cookies.get('fd')}}<br>
+    Second data : {{request.args.get('d2')}}<br>
+    Third data : <input type="text" name="d3"><br>
+    <input type="submit">
+</form>
+</body>
+</html>
+-->
+
+
+<!--SESSION-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Third</title>
+</head>
+<body>
+<form action="/third">
+    First data : {{session.get('fd')}}<br>
+    Second data : {{request.args.get('d2')}}<br>
+    Third data : <input type="text" name="d3"><br>
+    <input type="submit">
+</form>
+</body>
+</html>

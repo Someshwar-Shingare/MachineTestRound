@@ -1,0 +1,20 @@
+{% extends 'App1/base.html' %}
+{% load static %}
+{% block content %}
+
+     <h1>Amazon is one of the E-commerce Company</h1>
+      <a href="//google.com">Search</a><br><br>
+     <img src="{% static 'App1/image6.jpg' %}" alt="not found">
+{% endblock %}
+
+{% block title %}
+     <title>home page</title>
+{% endblock %}
+
+      {% block content1 %}
+          <h1>First block code here</h1>
+      {% endblock %}
+
+      {% block content2 %}
+          <h1>Last block code here</h1>
+      {% endblock %}
